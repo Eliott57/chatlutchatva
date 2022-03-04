@@ -43,7 +43,6 @@ app.post('/chats/ajout', async (req, res) => {
     
 
     fs.readdir(path.join(__dirname, 'public/img/tmp'), (err, files) => {
-        //handling error
         if (err) {
             return console.log(`Impossible d'ouvrir le dossier: ${err}`);
         } 

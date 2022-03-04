@@ -69,7 +69,9 @@ fetch(url, options)
     
                     fetch(url, options)
                         .then(() => {
-                            location.reload();
+                            setTimeout(() => {
+                                location.reload();
+                            }, 500);
                         });
                 }
             });
