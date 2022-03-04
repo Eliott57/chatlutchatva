@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Chats | ChatLut, ChatVa?</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel='stylesheet' type='text/css' href='/css/index.css' />
+    <link rel='stylesheet' type='text/css' href='/css/chats/ajout.css' />
+</head>
+<body>
+    <div class="container min-vh-100 min-vw-100 bg-primary d-flex justify-content-evenly align-items-center">
+        <div class="position-absolute top-0 end-0 mt-4 me-4">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link active text-white" aria-current="page" href="/">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="/chats">Les chats</a>
+                </li>
+              </ul>
+        </div>
+        <div class="d-flex flex-column justify-content-start">
+            <div>
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Nom de votre chat" name="nomChat">
+                    <label for="name" class="form-label">Nom de ton chat</label>
+                    <div id="nameHelp" class="form-text text-light">Ne me dit pas qu'il s'appelle Cookie ou Caramel...</div>
+                </div>
+                <form   action="/chats/ajout/image"
+                        method="POST"
+                        class="dropzone mb-4"
+                        id="dropzone-chats">
+                        <label for="files" class="dropzone-container">
+                            <div class="file-icon">+</div>
+                            <div class="dropzone-title">
+                                Téléverse ta photo ou <span class='browse'>clique ici</span> pour en ajouter une
+                            </div>
+                        </label>
+                </form>
+                <button id="submitForm" type="submit" class="btn btn-outline-light w-100" disabled>Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <script src="/js/dropzone.js"></script>
+    <script src="/js/crud.js"></script>
+</body>
+</html>

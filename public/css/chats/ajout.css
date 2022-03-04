@@ -1,0 +1,90 @@
+.dropzone {
+    border: 0.0625rem solid #c6ccd6;
+    border-radius: 0.5rem;
+    background-color: #f9f9fb;
+    display: block;
+  }
+  .dropzone .dropzone-container {
+    padding: 2rem 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #8c96a8;
+    z-index: 20;
+  }
+  .dropzone .dropzone-container .dropzone-title {
+    padding-top: 1.5rem;
+  }
+  .dropzone .dropzone-container .browse {
+    text-decoration: underline;
+    color: #007bff;
+  }
+  .dropzone .dropzone-container .browse:hover {
+    cursor: pointer;
+  }
+  .dropzone .file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+  }
+  
+  .file-icon {
+    /* Need position to allow stacking of pseudo-elements */
+    position: relative;
+    width: 4rem;
+    height: 5.25rem;
+    /* Padding for demo purposes */
+    padding: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #007bff;
+    /* Second sheet of paper */
+  }
+  .file-icon, .file-icon:before, .file-icon:after {
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    border: 0.125rem solid #b8bec9;
+  }
+  .file-icon:before, .file-icon:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0.125rem solid #ccd0d8;
+  }
+  .file-icon:before {
+    left: -0.625rem;
+    top: 0.5rem;
+    z-index: -1;
+  }
+  .file-icon:after {
+    top: -0.25rem;
+    right: -0.25rem;
+    left: auto;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.25rem;
+    border-width: 0.625rem;
+    border-style: solid;
+    border-color: #f9f9fb #f9f9fb #b8bec9 #b8bec9;
+  }
+
+  .dropzone.dz-clickable .dz-message{
+      display: none !important;
+  }
+
+  .dz-remove{
+      text-decoration: none;
+  }
