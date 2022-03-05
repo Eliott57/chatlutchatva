@@ -26,7 +26,7 @@ fetch(url, options)
             newImage.src = `img/chats/${chat.image}`;
             
             let newTitleDiv = document.createElement('div');
-            newTitleDiv.classList.add('d-flex', 'flex', 'flex-row', 'justify-content-between', 'align-items-center', 'mb-2');
+            newTitleDiv.classList.add('d-flex', 'flex', 'flex-row', 'justify-content-between', 'align-items-center', 'mb-2', 'w-100');
 
             let newName = document.createElement('div');
             newName.innerHTML = chat.nom;
@@ -36,8 +36,8 @@ fetch(url, options)
 
             newDeleteLink.id = imgSplit[0];
             newDeleteLink.dataset.ext = imgSplit[1];
-            newDeleteLink.classList.add('bg-danger', 'text-white', 'delete-link', 'p-1');
-            newDeleteLink.innerHTML = 'Supprimer';
+            newDeleteLink.classList.add('bg-danger', 'text-white', 'delete-link', 'p-1', 'w-25', 'text-center');
+            newDeleteLink.innerHTML = '<i class="fa fa-trash"></i>';
             
             newTitleDiv.appendChild(newName);
             newTitleDiv.appendChild(newDeleteLink);

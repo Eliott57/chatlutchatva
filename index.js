@@ -12,12 +12,10 @@ const chats = require('./data/chats.json')
 
 const app = express();
 
-// enable files upload
 app.use(fileUpload({
     createParentPath: true
 }));
 
-//add other middleware
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -84,6 +82,17 @@ app.post('/chats/ajout/image', async (req, res) => {
         } else {
             const file = Object.values(Object.assign({},req.files))[0];
             
+            //Suppression des images déjà présentes dans le dossier temporaire au cas où
+            fs.readdir('./public/img/tmp/', (err, files) => {
+                if (err) throw err;
+              
+                for (const file of files) {
+                    fs.unlink(`./public/img/tmp/${file}`, err => {
+                        if (err) throw err;
+                      });
+                }
+              });
+
             file.mv(`./public/img/tmp/${file.name}`);
 
             res.send({

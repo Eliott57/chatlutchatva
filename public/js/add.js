@@ -25,6 +25,7 @@ function ajout(){
             submitBtn.innerText = 'Ajouter';
             catName.value = '';
             dropzone.removeAllFiles();
+            vNotify.success({text: 'Ton chat a été ajouté avec succès', title:'Félicitations'});
         });
 }
 
