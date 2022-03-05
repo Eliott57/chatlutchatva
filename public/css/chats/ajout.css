@@ -81,7 +81,7 @@
     border-color: #f9f9fb #f9f9fb #b8bec9 #b8bec9;
   }
 
-  .dropzone.dz-clickable .dz-message{
+  .dz-message{
       display: none !important;
   }
 

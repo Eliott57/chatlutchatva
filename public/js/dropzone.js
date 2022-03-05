@@ -5,6 +5,7 @@ const dropzone = new Dropzone("#dropzone-chats", {
     uploadMultiple: true,
     acceptedFiles: '.png, .jpg, .webp',
     maxFiles: 1,
+    clickable: '.browse',
     dictDefaultMessage : '',
     dictRemoveFile : 'Supprimer',
     dictCancelUpload : 'Annuler',
